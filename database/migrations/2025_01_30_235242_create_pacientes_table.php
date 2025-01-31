@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('pacientes', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
+            $table->string('cpf');
+            $table->string('celular');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
